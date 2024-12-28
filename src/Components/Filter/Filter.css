@@ -1,0 +1,218 @@
+.filter-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(132, 135, 118, 0.5); /* Semi-transparent black */
+  z-index: 1000; /* Ensure it sits behind the filter */
+}
+
+/* Filter Drawer */
+.filter-drawer {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  right: 10px;
+  width: 450px;
+  height: 98%; /* Reduced height */
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  z-index: 1000;
+  border-radius: 20px;
+  transform: translateY(-50%) translateX(100%); /* Adjust for top 50% */
+}
+
+.filter-drawer.active {
+  transform: translateY(-50%) translateX(0); /* Slide in */
+}
+
+.filter-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-drawer-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.filter-body {
+  flex-grow: 1;
+  margin-top: 10px;
+}
+
+.date-range-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-range-buttons button {
+  font-size: 12px;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.date-range-buttons button:hover {
+  background-color: #ece8e8e3;
+}
+
+.date-selection,
+.transaction-type,
+.transaction-status {
+  margin-top: 20px;
+}
+
+.input-date {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.date-selection input {
+  background-color: #f0eded;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin-top: 5px;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.transaction-type select,
+.transaction-status select {
+  background-color: #f0eded;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.filter-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-btn,
+.apply-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0px 10px;
+  font-weight: 600;
+  transition: all 0.3s;
+  font-size: 15px;
+}
+
+.clear-btn {
+  box-shadow: 0 0px 2px rgba(210, 207, 207, 0.878);
+  color: #0b0c0d;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.apply-btn {
+  background-color: #0b0c0d23;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.175);
+  width: 100%;
+}
+
+.clear-btn:hover,
+.apply-btn:hover {
+  background-color: #0b0c0d;
+  color: white;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.dropdown-icon {
+  font-size: 25px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  width: 91%;
+  margin-top: 5px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.175);
+  position: fixed;
+  z-index: 1000;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #0b0c0d;
+  border-radius: 0px;
+}
+
+.checkbox-text {
+  color: #131212;
+}
+
+
+
+@media (max-width: 480px) {
+  .filter-drawer{
+    width: 100%;
+    right: 0;
+  }
+}

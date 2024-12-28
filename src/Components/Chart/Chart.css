@@ -1,0 +1,71 @@
+/* src/components/TransactionChart/TransactionChart.css */
+
+.chart-container {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bal p {
+  font-size: 10px;
+  color: #7e7e7e;
+}
+
+.bal h2 {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.balance-sect {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.balance-sect button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chart {
+  width: 70%;
+  height: 100%;
+}
+
+/* @media (max-width: 768px) {
+    .chart-container {
+      height: 300px;
+    }
+  } */
+  @media (max-width: 480px) {
+    .chart{
+        width: 100%;
+    }
+    .chart-container {
+      height: 300px;
+    }
+    .balance-sect {
+      flex-direction: column;
+      align-items: normal;
+    }
+  }
+
+  @media (max-width: 884px) {
+    .chart{
+        width: 100%;
+    }
+    .chart-container {
+      height: 300px;
+    }
+    .balance-sect {
+      flex-direction: row;
+    }
+  }

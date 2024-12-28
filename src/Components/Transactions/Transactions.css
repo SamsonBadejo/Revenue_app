@@ -1,0 +1,123 @@
+.transactions-container {
+  margin: 5rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transactions-number h2 {
+  font-size: 20px;
+  color: #0c0c0c;
+  margin: 0;
+}
+
+.filter-container {
+  display: flex;
+  gap: 25px;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.098);
+  padding: 10px 25px;
+  border-radius: 25px;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter p {
+  color: #0b0c0d;
+}
+hr {
+  border: 1px solid #d9d4d4;
+  width: 100%;
+  margin: 25px 0;
+}
+
+/* Transactions styling */
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.arrow-icon {
+  transition: transform 0.3s;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.img-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.img-info img {
+  width: 48px;
+  height: 48px;
+}
+
+.img-info h5 {
+  margin: 0;
+  font-size: 15px;
+  color: #0b0c0d;
+  font-weight: 200;
+  margin: 10px 0;
+}
+
+.img-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #56616b;
+}
+
+/* Transaction details */
+.amount-date h5 {
+  margin: 0;
+  font-size: 15px;
+  color: #0b0c0d;
+  font-weight: 600;
+  margin: 10px 0;
+  text-align: right;
+}
+
+.amount-date p {
+  margin: 0;
+  font-size: 13px;
+  color: #56616b;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+
+  .transactions-container {
+    margin: 2rem 0 0.5rem 0;
+  }
+
+  .transactions-number h2 {
+    font-size: 15px;
+  }
+
+  .transactions-number p {
+    font-size: 10px;
+  }
+
+  .filter-container {
+    display: flex;
+    gap: 8px;
+  }
+  .filter {
+    padding: 10px 10px;
+  }
+
+  .filter p {
+    font-size: 10px;
+  }
+}
